@@ -1,14 +1,19 @@
-import React from 'react';
-import './App.css';
+import React, { Component } from "react";
+import logo from "./logo.svg";
+import Sentry from "./Sentry";
+import ErrorExample from "./ErrorExample";
+import "./App.css";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Hello Duclvcodes</h1>
-      </header>
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <Sentry url="your_url_here">
+        <div className="App">
+          <ErrorExample />
+        </div>
+      </Sentry>
+    );
+  }
 }
 
 export default App;
